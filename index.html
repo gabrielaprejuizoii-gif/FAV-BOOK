@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lesson 5 — My Favorite Book</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF1F7;--p:#F8D5E5;--m:#E98AB5;--f:#D63384;--fd:#9D174D;--c:#fff;--t:#382532;--ok:#1f7a4d;--no:#b42318;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1822;--p:#4a2a3b;--m:#E98AB5;--f:#f06aa8;--fd:#ffc2dc;--c:#38222e;--t:#fbeaf2;--ok:#7be0ac;--no:#ff9b91}}
+*{box-sizing:inherit}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.55 Nunito,system-ui,sans-serif}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--fd);margin:.2em 0}
+header{background:linear-gradient(135deg,var(--p),var(--bg));padding:18px 16px 10px;border-bottom:2px solid var(--p)}
+.w{max-width:860px;margin:auto}
+h1{font-size:1.9rem}h1 em{color:var(--f)}.sub{margin:0;opacity:.85}
+.bar{height:10px;background:var(--p);border-radius:9px;margin:12px 0 8px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--m),var(--f));transition:width .4s}
+nav{display:flex;gap:6px;flex-wrap:wrap}nav button{flex:1;min-width:44px;padding:6px 4px;font-size:.8rem}
+button,select,input,textarea{font:inherit;color:var(--t)}
+button{cursor:pointer;border:2px solid var(--m);background:var(--c);border-radius:12px;padding:8px 14px;font-weight:700;transition:.15s}
+button:hover{border-color:var(--f);transform:translateY(-1px)}button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--f);outline-offset:2px}
+button.pri,nav button.on{background:var(--f);border-color:var(--f);color:#fff}button.sel{background:var(--p);border-color:var(--f)}
+nav button.done::after{content:" ✓"}
+main{max-width:860px;margin:16px auto;padding:0 14px 40px}
+.card{background:var(--c);border-radius:20px;padding:18px;margin:14px 0;box-shadow:0 4px 18px rgba(214,51,132,.12);border:1px solid var(--p);animation:in .35s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.min{float:right;background:var(--p);color:var(--fd);border-radius:20px;padding:2px 12px;font-size:.85rem;font-weight:700}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+textarea,input[type=text],select{width:100%;padding:10px;border:2px solid var(--p);border-radius:12px;background:var(--bg)}
+select{width:auto;min-width:150px}
+.chip{background:var(--p);border:none;font-weight:600;font-size:.9rem;padding:5px 12px;border-radius:20px}
+.fb{margin-top:8px;padding:8px 12px;border-radius:10px;display:none;font-weight:600}.fb.ok{display:block;background:rgba(31,122,77,.14);color:var(--ok)}.fb.no{display:block;background:rgba(180,35,24,.12);color:var(--no)}
+.hint,.help{display:none;background:var(--bg);border-left:4px solid var(--m);padding:8px 12px;border-radius:8px;margin-top:8px}.show{display:block!important}
+.q{font-weight:700;margin:12px 0 4px}.big{font-size:1.25rem}
+.tv{background:#fff8d6;color:#382532;border:2px dashed #c9a400;border-radius:14px;padding:10px 14px;margin:14px 0;font-size:.92rem}
+.flash{min-height:230px;text-align:center;background:linear-gradient(160deg,var(--c),var(--p));border:2px solid var(--m);border-radius:20px;padding:20px}
+.dots{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:8px 0}.dots button{width:30px;height:30px;padding:0;border-radius:50%;font-size:.75rem}
+.easy{background:#b8e8cf!important;color:#14532d}.almost{background:#ffe29a!important;color:#5c4400}.again{background:#f9b4ad!important;color:#7a1a12}
+.tok{padding:4px 10px;margin:2px}.hl{background:#fff176;color:#382532;border-radius:4px}.w2{cursor:pointer;padding:0 2px}
+.books{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:560px){.books{grid-template-columns:1fr}}
+.cover{border-radius:10px 16px 16px 10px;padding:18px 14px;min-height:150px;color:#fff;border-left:10px solid rgba(0,0,0,.25)}
+.cover b{font-family:'Playfair Display',serif;font-size:1.15rem;display:block}
+.A{background:linear-gradient(150deg,#E98AB5,#9D174D)}.B{background:linear-gradient(150deg,#D63384,#6d0f37)}
+.out{background:var(--bg);border:2px dashed var(--m);border-radius:14px;padding:14px;margin-top:10px}
+.foot{display:flex;justify-content:space-between;margin-top:18px}
+label.ck{display:block;padding:6px 0}.ck input{width:20px;height:20px;accent-color:#D63384;vertical-align:middle;margin-right:8px}
+</style></head><body>
+<header><div class="w">
+<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><span>📖 ✿ Laura’s English</span>
+<label class="ck"><input type="checkbox" id="tvc"> Teacher’s View</label></div>
+<h1>Lesson 5 — <em>My Favorite Book</em></h1><p class="sub">Books, stories and the things we love to read. · 45 min</p>
+<div class="bar"><i id="pb"></i></div><nav id="nav" aria-label="Lesson steps"></nav></div></header>
+<main id="m"></main>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+let S={a:{},cards:{},ok:{},seen:{},tv:0,rec:{}};
+try{S=Object.assign(S,JSON.parse(localStorage.getItem('lauraL5')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('lauraL5',JSON.stringify(S))}catch(e){}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const words=s=>s.trim().split(/\s+/).filter(Boolean).length;
+function say(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.85;speechSynthesis.speak(u)}catch(e){}}
+let cur=0,EX={};
+/* ---------- exercise engine ---------- */
+function ex(id,it){EX[id]=it;const k='x_'+id;let body=it.t?`<input type="text" data-k="${k}" placeholder="${it.ph||'Write here…'}" aria-label="answer">`:
+`<div class="row">${it.o.map(o=>`<button data-act="pick" data-id="${id}" data-v="${esc(o)}" class="${S.a[k]===o?'sel':''}">${o}</button>`).join('')}</div>`;
+return `<div class="q">${it.q}</div>${body}<div class="row"><button class="pri" data-act="chk" data-id="${id}">Check my answer</button><button data-act="tog" data-id="h-${id}">Show a hint</button></div><div class="hint" id="h-${id}">💡 ${it.h}</div><div class="fb" id="fb-${id}" role="status"></div>`}
+function chk(id){const it=EX[id],k='x_'+id,v=(S.a[k]||'').trim(),fb=$('#fb-'+id);
+if(!v){fb.className='fb no';fb.textContent='Choose or write an answer first.';return}
+const r=it.f?it.f(v):(v===it.ans?1:0);S.ok[id]=r===1;save();
+fb.className='fb '+(r===1?'ok':'no');fb.textContent=r===1?'✓ '+it.ok:r===2?'Good idea! '+it.part:'Almost! '+it.no}
+/* ---------- SRE cards ---------- */
+const C=[
+{q:'I like ______ because it is interesting.',t:'mc',o:['books','sleep','university'],a:'books',h:'You read it. It has a title.',pt:'Eu gosto de livros porque é interessante.',e:'I like books because they are interesting.',tip:'like + plural noun: I like books.'},
+{q:'Build a sentence: I / like / books',t:'ord',o:['books','I','like'],a:'I like books.',h:'Start with who: I…',pt:'Eu gosto de livros.',e:'I like poems.',tip:'Subject + verb + object.'},
+{q:'I like music. I also like ______.',t:'mc',o:['books','poems','movies'],a:'*',h:'Choose what is true for you!',pt:'Eu gosto de música. Eu também gosto de…',e:'I like music. I also like poems.',tip:'also = também. Any answer is correct!'},
+{q:'Choose the correct sentence.',t:'mc',o:['My favorite book are this.','My favorite book is this.'],a:'My favorite book is this.',h:'One book → is.',pt:'Meu livro favorito é este.',e:'My favorite book is Dom Casmurro.',tip:'One thing = is. Two things = are.'},
+{q:'What is your favorite movie?',t:'txt',m:'My favorite movie is Spirited Away.',h:'Use: My favorite movie is…',pt:'Qual é o seu filme favorito?',e:'My favorite movie is Spirited Away.',tip:'Write a complete sentence.'},
+{q:'Who writes a book?',t:'mc',o:['An author','A reader','A title'],a:'An author',h:'Aline Bei is the ______ of a book.',pt:'Quem escreve um livro? Um autor.',e:'The author writes stories.',tip:'author = autor(a)'},
+{q:'“Literature is interesting.” Which word describes literature?',t:'mc',o:['interesting','literature','is'],a:'interesting',h:'It is an adjective.',pt:'Literatura é interessante.',e:'Art is beautiful.',tip:'Adjectives: interesting, beautiful, funny, difficult, easy.'},
+{q:'I study ______ and I like ______.',t:'txt',m:'I study Portuguese and Spanish and I like books.',h:'What do you study at university?',pt:'Eu estudo… e eu gosto de…',e:'I study Letters and I like poems.',tip:'I study + subject.'},
+{q:'Build a sentence: She / likes / poems',t:'ord',o:['poems','likes','She'],a:'She likes poems.',h:'She + likes (with -s).',pt:'Ela gosta de poemas.',e:'He likes novels.',tip:'He / She / It → verb + s.'},
+{q:'I ______ this book. It is beautiful. (love / loves)',t:'mc',o:['love','loves'],a:'love',h:'The subject is I.',pt:'Eu amo este livro.',e:'I love music.',tip:'I love, but she loves.'},
+{q:'This test is not difficult. It is ______.',t:'mc',o:['easy','funny','beautiful'],a:'easy',h:'Opposite of difficult.',pt:'Este teste não é difícil. É fácil.',e:'English is easy for me!',tip:'difficult ↔ easy'}];
+let ci=0,sel='',ord=[],shown=false;
+function cardBox(){const c=C[ci],st=S.cards[ci];let f='';
+if(c.t=='mc')f=`<div class="row" style="justify-content:center">${c.o.map(o=>`<button data-act="copt" data-v="${esc(o)}" class="${sel===o?'sel':''}">${o}</button>`).join('')}</div>`;
+else if(c.t=='ord')f=`<p class="big">${ord.join(' ')||'…'}</p><div class="row" style="justify-content:center">${c.o.map(o=>`<button class="tok" data-act="cord" data-v="${o}" ${ord.includes(o)?'disabled':''}>${o}</button>`).join('')}<button data-act="cclr">↺</button></div>`;
+else f=`<input type="text" data-k="c${ci}" placeholder="${esc(c.m)}">`;
+let res='';if(shown){let ok=c.t=='mc'?(c.a=='*'?sel:sel==c.a):c.t=='ord'?ord.join(' ')+'.'==c.a:null;
+res=(ok===true?'<b style="color:var(--ok)">✓ Great!</b> ':ok===false?'<b style="color:var(--no)">Not yet.</b> ':'')+''}
+return `<div class="dots">${C.map((_,i)=>`<button data-act="cgo" data-v="${i}" class="${S.cards[i]||''}" ${i==ci?'style="border-color:var(--fd);border-width:3px"':''} aria-label="card ${i+1}">${i+1}</button>`).join('')}</div>
+<div class="flash"><small>Card ${ci+1}/${C.length}</small>
+${shown?`<p class="big">${res}${c.a=='*'?'Any true answer!':c.a||c.m}</p><p>🇧🇷 ${c.pt}</p><p><i>Example: ${c.e}</i></p><p>💡 ${c.tip}</p>
+<div class="row" style="justify-content:center"><button class="easy" data-act="rate" data-v="easy">Easy</button><button class="almost" data-act="rate" data-v="almost">Almost</button><button class="again" data-act="rate" data-v="again">Review again</button></div>`:
+`<p class="big">${c.q}</p>${f}<div class="row" style="justify-content:center"><button data-act="tog" data-id="ch">Show a hint</button><button class="pri" data-act="rev">Show answer</button></div><div class="hint" id="ch">💡 ${c.h}</div>`}</div>
+<p style="text-align:center">🌱 Easy: ${Object.values(S.cards).filter(x=>x=='easy').length} · Almost: ${Object.values(S.cards).filter(x=>x=='almost').length} · Review again: ${Object.values(S.cards).filter(x=>x=='again').length}
+<br><button data-act="nxt">Go to next card to review →</button></p>`}
+function drawCard(){$('#cb').innerHTML=cardBox();restore()}
+/* ---------- vocabulary ---------- */
+const V=[['book','livro','This book is interesting.'],['author','autor(a)','Aline Bei is the author of A Pequena Coreografia do Adeus.'],['novel','romance','A novel tells a story.'],['poem','poema','A poem is a type of writing.'],['story','história','I like this story.'],['character','personagem','The character is in the story.'],['title','título','The title has three words.'],['recommend','recomendar','I recommend this book.'],['writer','escritor(a)','A writer writes books.'],['poetry','poesia','Poetry is beautiful.'],['reader','leitor(a)','I am a reader.'],['favorite','favorito(a) · review','My favorite book is…']];
+const M=[['author','autor(a)'],['novel','romance'],['poem','poema'],['character','personagem'],['title','título'],['recommend','recomendar']];
+const G=[['A long story with characters and events','Novel'],['A short text that can express feelings','Poem'],['It tells a story with a title and characters','Novel']];
+/* ---------- steps ---------- */
+const ST=[
+{n:'Warm-up',min:5,r:()=>`<div class="card"><span class="min">5 min</span><h2>Welcome, Laura! ✿</h2><p class="big">What do you like to read?</p>
+<div class="row">${['Books 📖','Poems ✒️','Stories 📚'].map(o=>`<button data-act="pick2" data-v="${o}" class="${S.a.w0===o?'sel':''}">${o}</button>`).join('')}</div><p id="w0r">${S.a.w0?'Nice! I like '+S.a.w0.split(' ')[0].toLowerCase()+' too.':''}</p></div>
+${[['w1','Do you like reading?',['I like books.','I don’t read very often.','Yes, I do.']],['w2','Do you like novels or poems?',['I like novels.','I like poems.','I like both.']],['w3','What is your favorite book?',['My favorite book is ','I don’t know.']]].map(([k,q,ch])=>`<div class="card"><div class="q">${q}</div><div class="row">${ch.map(c=>`<button class="chip" data-act="chip" data-k="${k}" data-v="${c}">${c}</button>`).join('')}</div><textarea rows="2" data-k="${k}" placeholder="Write here… (you can skip)"></textarea><button data-act="tog" data-id="hp-${k}">I need help</button><div class="help" id="hp-${k}">Model: ${ch[0]}…</div></div>`).join('')}`,
+t:'Goal: activate prior knowledge, lower anxiety. Accept one word or a full sentence. Answers: personal. Likely difficulty: “Do you like…?” short answers (Yes, I do). Simplify: let her point to the chips. Extra: “Why?” “What is your favorite poem?” Note: speaking comfort (1–5).'},
+{n:'Memory Garden',min:5,r:()=>`<div class="card"><span class="min">5 min</span><h2>🌸 Memory Garden — Let’s Review!</h2><p>Think first, then show the answer. Rate how it felt. Progress is saved on this device.</p><div id="cb"></div></div>`,
+t:'Goal: active recall of earlier words. These are candidates: mark which Laura really studied before; the rest become guided review. Expected: 1 books; 2 I like books.; 3 any; 4 B; 6 An author; 7 interesting; 9 She likes poems.; 10 love; 11 easy. Errors: “are” with singular; missing -s. Simplify: do only 5 cards. Extra: “Why do you like it?” Record Easy/Almost/Again counts.'},
+{n:'Vocabulary',min:8,r:()=>`<div class="card"><span class="min">8 min</span><h2>📚 Books &amp; literature</h2><p>Tap a word to see Portuguese and an example. 🔊 = listen.</p><div class="row">${V.map((v,i)=>`<button class="chip ${i>7?'':'pri'}" style="${i>7?'':'background:var(--f);color:#fff'}" data-act="vw" data-v="${i}">${v[0]}</button>`).join('')}</div><div class="out" id="vo">First 8 words (dark pink) are essential. Light pink words are extra.</div></div>
+<div class="card"><h3>1 · Match word and meaning</h3><p>Escolha o significado.</p>${M.map(([w],i)=>`<div class="row" style="align-items:center"><b style="min-width:110px">${w}</b><select data-k="m${i}" data-act="msel"><option value="">—</option>${M.map(x=>x[1]).sort().map(x=>`<option>${x}</option>`).join('')}</select><span id="mr${i}"></span></div>`).join('')}<div class="row"><button class="pri" data-act="mchk">Check my answer</button></div><div class="fb" id="mfb"></div></div>
+<div class="card"><h3>2 · Novel or poem?</h3>${G.map(([s],i)=>`<div class="row" style="align-items:center"><span style="flex:1">${s}</span><select data-k="g${i}"><option value="">—</option><option>Novel</option><option>Poem</option></select><span id="gr${i}"></span></div>`).join('')}<div class="row"><button class="pri" data-act="gchk">Check my answer</button><button data-act="tog" data-id="gh">Show a hint</button></div><div class="hint" id="gh">💡 A novel is long and has characters. A poem expresses feelings.</div></div>
+<div class="card"><h3>3 · Find the word</h3>${ex('v1',{q:'Aline Bei is the author of the book. Find: <b>autor(a)</b>',o:['Aline','author','book'],ans:'author',h:'It begins with “a”.',ok:'You found “author”.',no:'Look for the person who writes the book.'})}<hr>${ex('v2',{q:'The character is in the story. Find: <b>personagem</b>',o:['character','story','is'],ans:'character',h:'It begins with “c”.',ok:'Yes, “character”!',no:'Personagem = character.'})}</div>`,
+t:'Goal: recognize 8 core words, extras only if smooth. Answers: match: author-autor(a), novel-romance, poem-poema, character-personagem, title-título, recommend-recomendar. Sorting: Novel, Poem, Novel. Find: author, character. Difficulties: pronunciation of author /ˈɔːθər/, character /ˈkærɪktər/. Fix: model, repeat 3×. Simplify: 4 words only. Extra: “Is [her book] a novel or poems?”'},
+{n:'Grammar',min:7,r:()=>`<div class="card"><span class="min">7 min</span><h2>✏️ Present Simple</h2><h3>Observe</h3><p class="big">My favorite book is… · The author writes stories. · The book tells a story. · I like this book. · I recommend this book.</p>
+<h3>Discover</h3>${ex('d1',{q:'What does “I like this book” express?',o:['preference','information about the past','a question'],ans:'preference',h:'Like = gosto.',ok:'Yes! “I like” shows preference.',no:'It shows what you like: preference.'})}
+<div class="out"><b>Em português:</b><br>• I / You / We / They + verbo: <i>I like, you like, they like</i>.<br>• He / She / It + verbo com <b>-s</b>: <i>She likes, the author writes</i>.<br>• <i>to be</i> descreve e identifica: <i>My favorite book <b>is</b> interesting.</i><br>• <b>I like</b> ≠ <b>She likes</b>.</div></div>
+<div class="card"><h3>Practice</h3>${ex('g1',{q:'I ______ books. (like / likes)',o:['like','likes'],ans:'like',h:'Subject: I.',ok:'Great! You used “I like” correctly.',no:'Remember: “She likes”, but “I like”.'})}<hr>
+${ex('g2',{q:'The author ______ stories. (write / writes)',o:['write','writes'],ans:'writes',h:'The author = he/she/it.',ok:'Great! “The author writes” takes -s.',no:'The author = she/he → writes.'})}<hr>
+${ex('g3',{q:'My favorite book ______ interesting.',o:['is','are'],ans:'is',h:'One book.',ok:'Yes! One book → is.',no:'One book → is.'})}<hr>
+${ex('g4',{q:'Correct the sentence: <b>She like poems.</b>',t:1,ph:'Write the correct sentence',f:v=>/^she likes poems[.!]?$/i.test(v)?1:/likes/i.test(v)?2:0,part:'Check the capital letter and the period.',h:'She + verb + s.',ok:'Perfect! “She likes poems.”',no:'She is he/she/it, so add -s: likes.'})}<hr>
+${ex('g5',{q:'Use: <b>I like ______ because ______.</b>',t:1,ph:'I like … because …',f:v=>/^i like .+ because .+/i.test(v)?1:words(v)>2?2:0,part:'Try the complete sentence: I like … because …',h:'Example: I like poems because they are beautiful.',ok:'Your sentence is clear!',no:'Write: I like ___ because ___.'})}</div>`,
+t:'Goal: induce -s rule before explaining. Answers: preference; like; writes; is; “She likes poems.”; g5 open (any true reason; accept “is/are” errors, correct gently). Likely errors: “She like”, “book are”, omitting “because”. Fix by recast, not lecture. Simplify: only I like / She likes. Extra: “What does your friend like?” Record: -s accuracy.'},
+{n:'Reading',min:8,r:()=>{const t='A novel is a long story. It often has characters and events. A poem is a type of writing. It can express feelings and ideas.'.split(' ');return `<div class="card"><span class="min">8 min</span><h2>🌷 Two literary worlds</h2><div class="books"><div class="cover A"><small>Book A · novel</small><b>A Pequena Coreografia do Adeus</b>Aline Bei</div><div class="cover B"><small>Book B · poems</small><b>Os Cem Melhores Poemas Brasileiros do Século</b></div></div></div>
+<div class="card"><h3>Novel or poem?</h3><p>Tap the words you know. <button data-act="say" data-t="${t.join(' ')}">🔊 Listen</button></p><p class="big">${t.map((w,i)=>`<span class="w2 ${S.a['hl'+i]?'hl':''}" tabindex="0" role="button" data-act="hl" data-v="${i}">${w}</span>`).join(' ')}</p></div>
+<div class="card">${ex('r1',{q:'Who is the author of Book A?',o:['Aline Bei','Laura','Book B'],ans:'Aline Bei',h:'Look under the title of Book A.',ok:'Yes, Aline Bei.',no:'Look at Book A again.'})}<hr>
+${ex('r2',{q:'Which title includes the word “poemas”?',o:['Book A','Book B'],ans:'Book B',h:'Poemas ≈ poems.',ok:'Right! Book B.',no:'Look for “poemas”.'})}<hr>
+${ex('r3',{q:'Which title includes the word “coreografia”?',o:['Book A','Book B'],ans:'Book A',h:'Read the first title.',ok:'Right! Book A.',no:'Look at Book A.'})}<hr>
+<div class="q">Do you prefer novels or poems?</div><div class="row">${['I prefer novels.','I prefer poems.','I like both.'].map(c=>`<button class="chip" data-act="chip" data-k="r4" data-v="${c}">${c}</button>`).join('')}</div><input type="text" data-k="r4" placeholder="Write here…">
+<div class="q">Which book would you like to talk about today?</div><input type="text" data-k="r5" placeholder="I would like to talk about…"></div>`},
+t:'Goal: reading with only safe information (titles, author). Answers: Aline Bei; Book B; Book A; r4–r5 open. Do not add plot details; let Laura supply her own ideas. Difficulties: comparing “novel/poem”; “prefer”. Simplify: use “I like”. Extra: “Is it long or short?” “Do you read it in the morning or at night?” Record words she tapped.'},
+{n:'Recommendation',min:9,r:()=>{const b=S.a.rb;return `<div class="card"><span class="min">9 min</span><h2>💌 Laura’s Book Recommendation</h2><h3>Step 1 · Choose a book</h3><div class="row">${['A Pequena Coreografia do Adeus','Os Cem Melhores Poemas Brasileiros do Século','Another'].map(o=>`<button data-act="book" data-v="${o}" class="${b===o?'sel':''}">${o=='Another'?'Another book':o}</button>`).join('')}</div>
+<input type="text" data-k="rbo" placeholder="Write the title" style="display:${b=='Another'?'block':'none'}"></div>
+<div class="card"><h3>Step 2 · Complete the sentences</h3><p>Use words only if they are true for you.</p>
+<div class="q">The author is ______.</div><input type="text" data-k="ra" placeholder="e.g. Aline Bei">
+<div class="q">It is ______.</div><select data-k="rt"><option value="">—</option><option>a novel</option><option>a book of poems</option><option>a story</option></select>
+${[['rw','I like this book because ______.',['it is interesting.','it is beautiful.','it is emotional.','I like the writing.','I like the story.','it is special to me.']],['rv','I recommend this book because ______.',['it is interesting.','it is beautiful.','it is Brazilian.','it is special to me.']]].map(([k,q,ch])=>`<div class="q">${q}</div><div class="row">${ch.map(c=>`<button class="chip" data-act="chip" data-k="${k}" data-v="${c}">${c}</button>`).join('')}</div><input type="text" data-k="${k}" placeholder="Write or tap an idea">`).join('')}</div>
+<div class="card"><h3>Step 3 · Build my recommendation</h3><button class="pri" data-act="build">Build my text ✿</button> <small>You can edit above and build again.</small><div class="out" id="ro">${S.rec.t?esc(S.rec.t):'Your text appears here.'}</div></div>
+<div class="card"><h3>Step 4 · Speaking practice</h3><p>Read aloud. Listen first if you want.</p><div class="row"><button data-act="say" data-t="${esc(S.rec.t||'')}">🔊 Listen</button><button data-act="split">Short sentences</button></div><div class="out big" id="sp">${S.rec.t?esc(S.rec.t):'Build your text first.'}</div><p><small>Recording: use your phone’s voice recorder, then listen and compare. This page does not record audio.</small></p></div>
+<div class="card"><h3>Step 5 · Self-assessment</h3>${['Can I say the title of a book?','Can I talk about the author?','Can I say why I like a book?','Can I recommend a book?'].map((q,i)=>`<label class="ck"><input type="checkbox" data-k="s${i}">${q}</label>`).join('')}</div>`},
+t:'Goal: scaffolded production. Answer examples: “My favorite book is… The author is Aline Bei. It is a novel. I like this book because it is special to me.” Accept personal opinions; do not mark as wrong. For Book B, author field: “many authors” or leave blank. Errors: “is a novels”, missing “because”. Simplify: only title + “I like it.” Extra: “Who can read this book?” “Is it easy or difficult?” Record fluency, pronunciation, self-assessment.'},
+{n:'Exit ticket',min:3,r:()=>`<div class="card"><span class="min">3 min</span><h2>🎀 Exit ticket</h2><div class="q">1. What is one new word you learned today?</div><input type="text" data-k="e1"><div class="q">2. My favorite book is ______.</div><input type="text" data-k="e2" placeholder="My favorite book is…"><div class="q">3. I recommend this book because ______.</div><input type="text" data-k="e3" placeholder="I recommend this book because…"><div class="row"><button class="pri" data-act="fin">Review my answers</button></div></div><div id="fin"></div>`,
+t:'Goal: retrieval and closure. Accept any new word; correct “favorite” spelling gently. Note: words recalled, sentence completeness, confidence. Plan for Lesson 6: re-review cards marked “Review again”. Simplify: answer only question 1.'}];
+/* ---------- render ---------- */
+function show(i){cur=i;EX={};if(i==1){ci=0;sel='';ord=[];shown=false}
+$('#m').innerHTML=ST[i].r()+`<div class="tv" style="display:${S.tv?'block':'none'}"><b>Teacher’s View — ${ST[i].n} (${ST[i].min} min)</b><br>${ST[i].t}</div><div class="foot"><button ${i?'':'disabled'} data-act="go" data-v="${i-1}">← Back</button><button class="pri" data-act="go" data-v="${i+1}" ${i==6?'style="display:none"':''}>Next →</button></div>`;
+if(i==1)drawCard();restore();bar();window.scrollTo({top:0,behavior:'smooth'})}
+function bar(){$('#pb').style.width=((cur+1)/ST.length*100)+'%';$('#nav').innerHTML=ST.map((s,i)=>`<button data-act="go" data-v="${i}" class="${i==cur?'on':''} ${S.seen[i]?'done':''}">${i+1}. ${s.n}</button>`).join('')}
+function restore(){$$('[data-k]').forEach(e=>{const v=S.a[e.dataset.k];if(e.type=='checkbox')e.checked=!!v;else if(v!=null)e.value=v})}
+$('#tvc').checked=!!S.tv;$('#tvc').onchange=e=>{S.tv=e.target.checked?1:0;save();$$('.tv').forEach(t=>t.style.display=S.tv?'block':'none')};
+document.addEventListener('input',e=>{const k=e.target.dataset&&e.target.dataset.k;if(k){S.a[k]=e.target.type=='checkbox'?e.target.checked:e.target.value;save()}});
+document.addEventListener('keydown',e=>{if((e.key=='Enter'||e.key==' ')&&e.target.classList.contains('w2')){e.preventDefault();e.target.click()}});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act,v=b.dataset.v,id=b.dataset.id;
+if(a=='go'){S.seen[cur]=1;save();show(+v)}
+else if(a=='tog')$('#'+id).classList.toggle('show')
+else if(a=='pick'){S.a['x_'+id]=v;save();b.parentElement.querySelectorAll('button').forEach(x=>x.classList.toggle('sel',x==b))}
+else if(a=='chk')chk(id)
+else if(a=='pick2'){S.a.w0=v;save();show(0)}
+else if(a=='chip'){const k=b.dataset.k,el=$(`[data-k="${k}"]`);el.value=v;S.a[k]=v;save();el.focus()}
+else if(a=='say')say(b.dataset.t)
+else if(a=='vw'){const w=V[+v];$('#vo').innerHTML=`<b class="big">${w[0]}</b> — ${w[1]}<br><i>${w[2]}</i> <button data-act="say" data-t="${w[0]}. ${w[2].replace('…','')}">🔊</button>`}
+else if(a=='mchk'){let n=0;M.forEach((m,i)=>{const ok=S.a['m'+i]===m[1];n+=ok;$('#mr'+i).textContent=ok?'✓':'✗'});const f=$('#mfb');f.className='fb '+(n==6?'ok':'no');f.textContent=n==6?'Great! All 6 matched.':`Almost! ${n}/6 correct. Try the ✗ words again.`;S.ok.match=n==6;save()}
+else if(a=='gchk'){let n=0;G.forEach((g,i)=>{const ok=S.a['g'+i]===g[1];n+=ok;$('#gr'+i).textContent=S.a['g'+i]?(ok?'✓':'✗'):''});S.ok.sort=n==3;save()}
+else if(a=='hl'){S.a['hl'+v]=!S.a['hl'+v];save();b.classList.toggle('hl')}
+else if(a=='book'){S.a.rb=v;if(v.startsWith('A Pequena')&&!S.a.ra)S.a.ra='Aline Bei';if(v.startsWith('Os Cem')&&S.a.ra=='Aline Bei')S.a.ra='';if(!S.a.rt)S.a.rt=v.startsWith('A Pequena')?'a novel':v.startsWith('Os Cem')?'a book of poems':'';save();show(5)}
+else if(a=='build'){const g=k=>(S.a[k]||'').trim().replace(/\.$/,'')||'______';const bk=S.a.rb=='Another'?g('rbo'):(S.a.rb||'______');
+const s=[`My favorite book is ${bk}.`,`The author is ${g('ra')}.`,`It is ${S.a.rt||'______'}.`,`I like this book because ${g('rw')}.`,`I recommend it because ${g('rv')}.`];S.rec={t:s.join(' '),s};save();show(5);$('#ro').scrollIntoView({block:'center'})}
+else if(a=='split'){const el=$('#sp');if(!S.rec.s)return;el.innerHTML=el.dataset.sp?esc(S.rec.t):S.rec.s.map(x=>`🌸 ${esc(x)}`).join('<br>');el.dataset.sp=el.dataset.sp?'':1}
+else if(a=='copt'){sel=v;drawCard()}
+else if(a=='cord'){ord.push(v);drawCard()}
+else if(a=='cclr'){ord=[];drawCard()}
+else if(a=='rev'){shown=true;drawCard()}
+else if(a=='rate'){S.cards[ci]=v;save();if(ci<C.length-1){ci++;sel='';ord=[];shown=false}drawCard()}
+else if(a=='cgo'){ci=+v;sel='';ord=[];shown=false;drawCard()}
+else if(a=='nxt'){let n=C.findIndex((_,i)=>S.cards[i]=='again'||S.cards[i]=='almost');if(n<0)n=C.findIndex((_,i)=>!S.cards[i]);if(n>=0){ci=n;sel='';ord=[];shown=false;drawCard()}}
+else if(a=='fin'){S.seen[6]=1;save();bar();const ok=Object.values(S.ok).filter(Boolean).length;
+$('#fin').innerHTML=`<div class="card" style="background:linear-gradient(135deg,var(--p),var(--c));text-align:center"><h2>Parabéns, Laura! 🌸 Great work today!</h2>
+<p><b>Your answers</b><br>New word: ${esc(S.a.e1||'—')}<br>${esc(S.a.e2||'My favorite book is ______.')}<br>${esc(S.a.e3||'I recommend this book because ______.')}</p>
+<p>✿ Memory Garden cards reviewed: ${Object.keys(S.cards).length}/${C.length}<br>✿ Exercises correct: ${ok}<br>✿ Recommendation: ${S.rec.t?'built ✓':'not built yet'}<br>✿ Self-assessment: ${[0,1,2,3].filter(i=>S.a['s'+i]).length}/4 “I can”</p>
+<p class="big">Keep reading, keep loving stories. 📖💗</p><button data-act="say" data-t="${esc(S.rec.t||'Great work today!')}">🔊 Listen to my recommendation</button></div>`;$('#fin').scrollIntoView({behavior:'smooth'})}
+});
+show(0);
+</script></body></html>
